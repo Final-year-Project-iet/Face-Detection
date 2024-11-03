@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #333333); /* Dark gradient background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #f0f0f0; /* Light text color */
+}
+
+h1 {
+  font-size: 2.5rem; /* Large heading */
+  font-weight: 600; /* Slightly lighter weight for modern feel */
+  color: #ffffff; /* White text color for heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center;
+  text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px; /* Rounded corners for the container */
+  overflow: hidden; /* Clip inner elements */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Softer shadow for depth */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Light border */
+}
+
+video {
+  width: 720px;
+  height: 560px;
+  border-radius: 12px; /* Rounded corners */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px; /* Rounded corners */
+}
+
+.intruder-detected {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: red;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.8); /* Glow effect */
+}
+
+@media (max-width: 768px) {
+  video {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
